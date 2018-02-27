@@ -1,0 +1,20 @@
+<template name="home">
+    <!-- markdown escreve o texto como um texto com quebras de linhas normais ignorando as tags html -->
+    {{#markdown}} 
+    ## Welcome to my Blog
+    Here I'm talking about my latest discoveries from the world of JavaScript.
+    
+    {{/markdown}}
+
+    <!-- <h1>Felipe</h1> -->
+    {{exampleHelper}}
+
+     <!-- O valor é recebido do temple dentro de examples.html -->
+    {{> contextExample someText="I was set in the parent template's helper, as an argument."}}
+
+    <!-- Valor está sendo colocado aqui-->
+    {{> contextExample dataContextHelper}}
+
+    <p>{{someNested.text}}</p>
+   
+</template>
