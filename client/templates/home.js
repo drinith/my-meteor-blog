@@ -29,7 +29,11 @@ Template.home.helpers({
     }
 });
 
+//
 Template.home.rendered = function () {
     console.log('Rendered the home template');
+    console.log(this.find('p').innerHTML);
     this.find('p').innerHTML = 'We just replaced that text!';
+
+    
 };
